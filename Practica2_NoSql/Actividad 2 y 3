@@ -1,0 +1,51 @@
+use BaseArticulos
+//db.articulos.insertMany([
+//{"_id":1,"nombre":"MULTIFUNCION HP DESKJET 2675","rubro":"impresora","precio":3000,"stock":20},
+//{"_id":2,"nombre":"MULTIFUNCION EPSON EXPRESSION XP241","rubro":"impresora","precio":3700,"stock":5},
+//{"_id":3,"nombre":"LED 19 PHILIPS","rubro":"monitor","precio":4500,"stock":2},
+//{"_id":4,"nombre":"LED 22 PHILIPS","rubro":"monitor","precio":5700,"stock":4},
+//{"_id":5,"nombre":"LED 27 PHILIPS","rubro":"monitor","precio":12000,"stock":1},
+//{"_id":6,"nombre":"LOGITECH M90","rubro":"mouse","precio":300,"stock":4}
+//])
+
+//1. Imprimir todos los documentos de la colección 'articulos'.
+//db.articulos.find({});
+
+
+//2. Imprimir todos los documentos de la colección 'articulos' que no son impresoras.
+//db.articulos.find({rubro:{$nin:["impresora"]}});
+
+//3. Imprimir todos los artículos que pertenecen al rubro de 'mouse'.
+//db.articulos.find({rubro:{$in:["mouse"]}});
+
+//4. Imprimir todos los artículos con un precio mayor o igual a 5000.
+//db.articulos.find({precio:{$gte:5000}});
+
+//5. Imprimir todas las impresoras que tienen un precio mayor o igual a 3500.
+//db.articulos.find({$and: [{precio:{$gte:3500}}, {rubro:{$in:["impresora"]}}]});
+
+//6. Imprimir todos los artículos cuyo stock se encuentra comprendido entre 0 y 4.
+//db.articulos.find({$and: [{stock:{$gte:0}}, {stock:{$lte:4}}]});
+
+//7. Eliminar colecciones
+//db.colletiob.deleteMany
+
+//8. Borrar los documentos de la colección 'articulos' cuyo rubro son impresoras, utilizar las dos sintaxis que permite MongoDB.
+//db.articulos.remove({rubro:{$in:["impresora"]}});
+
+//9. Borrar todos los artículos que tienen un _id mayor o igual a 5.
+//db.articulos.remove({_id:{$gte:5}});
+
+//db.articulos.find({});
+
+//Tarea 3
+//1
+//operador $and
+//db.articulos.find({$and:[{stock:4},{precio: 5700}]});
+//2
+//operador $or
+//db.articulos.find({$or:[{precio:{$gte:5000}},{stock:5}]});
+//3
+//operador $not
+//db.articulos.deleteMany({stock:{$not:{$eq:20}}});
+

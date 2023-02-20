@@ -1,0 +1,52 @@
+use BddAlumnos
+db.Estudiantes.insertOne(
+{
+"nombre":"Edisson Quinde",
+"direccion":"Cdla. Casa para todos",
+"telefono":"0982901567"
+}
+)
+
+//Datos de compañeros
+db.Estudiantes.insertMany(
+   [
+  {
+  "_id":"001",
+  "nombre":"Bryam Tenecota",
+  "direccion":"San bartolo",
+  "telefono":"0974639212"
+                   },
+  {
+  "_id":"002",
+  "nombre":"William Martinez",
+  "direccion":"Paute",
+  "telefono":"0978352647"
+  },
+  {
+  "_id":"003",
+  "nombre":"Esteban Bauilima",
+  "direccion":"Circo Social",
+  "telefono":"0926394829"
+  }
+  ]
+  )
+
+//Id Repetidpo
+db.Estudiantes.insertMany(
+  {
+  "_id":"001",
+  "nombre":"Marco Polo",
+  "direccion":"Dubai",
+  "telefono":"0974632645"              
+  }
+  )
+
+//Listar todos los documentos
+db.Estudiantes.find()
+
+//Borar un documento 
+db.Estudiantes.remove(
+{"_id" : "002"});
+
+//Borrar la coleccion
+db.Estudiantes.drop();
